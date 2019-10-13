@@ -1,7 +1,14 @@
 {
   "name": "finance-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Finance App Demo",
+  "author": {
+    "name": "Miras Mustimov",
+    "email": "mustimov.m@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://finance-app-demo.netlify.com",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
