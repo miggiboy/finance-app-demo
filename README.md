@@ -1,5 +1,10 @@
 # finance-app
 
+> **Finance app demo to count your spendings.**
+
+### Live demo:
+<a href="https://finance-app-demo.netlify.com" target="_blank">finance-app-demo.netlify.com</a>
+
 ## Project setup
 ```
 yarn install
