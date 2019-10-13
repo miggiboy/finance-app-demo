@@ -29,10 +29,10 @@
                             type="text"
                             v-model.number="spending.size"
                             placeholder="Amount"
-                            class="spending-size px-2 outline-none"
+                            class="spending-size px-2 outline-none mb-3 md:mb-0"
                         />
 
-                        <div v-if="totalFunds" class="spending-as-percent-from-total-funds">
+                        <div v-if="totalFunds" class="spending-as-percent-from-total-funds px-2 md:px-0">
                             {{ (spending.size / totalFunds * 100).toFixed(1) }}%
                         </div>
                     </div>
