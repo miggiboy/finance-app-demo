@@ -1,24 +1,24 @@
 <template>
     <div class="p-32">
         <div class="flex items-center mb-12">
-            <h2 class="font-semibold uppercase tracking-wide mr-3">Доступная сумма:</h2>
+            <h2 class="font-semibold uppercase tracking-wide mr-3">Budget amount: </h2>
             <input type="text" v-model.number="totalFunds" class="total-funds border rounded px-3 outline-none">
         </div>
 
         <div>
             <div class="mb-4">
-                <h3 class="font-semibold mb-2">Расходы:</h3>
+                <h3 class="font-semibold mb-2">Expenses:</h3>
                 <div v-for="(spending, index) in spendings" class="py-3 border-b">
                     <div class="flex">
                         <input type="text"
                                v-model="spending.name"
-                               placeholder="Расход"
+                               placeholder="Expense"
                                class="spending-name px-2 outline-none"
                                @input="onTypeSpendingName(index)">
 
                         <input type="text"
                                v-model.number="spending.size"
-                               placeholder="Размер"
+                               placeholder="Amount"
                                class="spending-size px-2 outline-none">
 
                         <div v-if="totalFunds" class="spending-as-percent-from-total-funds">
@@ -29,11 +29,11 @@
             </div>
 
             <div class="mb-8">
-                <button type="button" @click="addSpending" class="add-spending px-4 py-1 bg-blue-500 rounded text-white">Добавить</button>
+                <button type="button" @click="addSpending" class="add-spending px-4 py-1 bg-blue-500 rounded text-white">Add</button>
             </div>
 
             <div class="free-funds flex">
-                <div class="mr-5">Остаток: {{ freeFunds }} тг</div>
+                <div class="mr-5">Balance: {{ freeFunds }}</div>
                 <div v-if="totalFunds" class="free-funds-percent">{{ (freeFunds / totalFunds * 100).toFixed(1) }}%</div>
             </div>
         </div>
